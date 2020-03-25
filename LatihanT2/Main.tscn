@@ -1,0 +1,130 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://StonePlatform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://BlueShip.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/stone.png" type="Texture" id=3]
+[ext_resource path="res://Assets/snow.png" type="Texture" id=4]
+[ext_resource path="res://Assets/meteorBrown_big1.png" type="Texture" id=5]
+
+[node name="Main" type="Node"]
+
+[node name="PlatformBlue" type="Node2D" parent="."]
+position = Vector2( 35, 565 )
+
+[node name="StonePlatform" parent="PlatformBlue" instance=ExtResource( 1 )]
+position = Vector2( -1, 6 )
+
+[node name="StonePlatform2" parent="PlatformBlue" instance=ExtResource( 1 )]
+position = Vector2( 65, 6 )
+
+[node name="stone" type="Sprite" parent="PlatformBlue/StonePlatform2"]
+position = Vector2( 138, -0.428589 )
+texture = ExtResource( 3 )
+
+[node name="stone2" type="Sprite" parent="PlatformBlue/StonePlatform2"]
+position = Vector2( 210, -0.428589 )
+texture = ExtResource( 3 )
+
+[node name="snow" type="Sprite" parent="PlatformBlue/StonePlatform2/stone2"]
+position = Vector2( 33.8667, -73.632 )
+texture = ExtResource( 4 )
+
+[node name="snow2" type="Sprite" parent="PlatformBlue/StonePlatform2/stone2"]
+position = Vector2( 33.6, -144.986 )
+texture = ExtResource( 4 )
+
+[node name="stone" type="Sprite" parent="PlatformBlue/StonePlatform2/stone2"]
+position = Vector2( 72.6, -0.682495 )
+texture = ExtResource( 3 )
+
+[node name="snow" type="Sprite" parent="PlatformBlue/StonePlatform2/stone2/stone"]
+position = Vector2( -316.733, -72.3065 )
+texture = ExtResource( 4 )
+
+[node name="snow2" type="Sprite" parent="PlatformBlue/StonePlatform2/stone2/stone"]
+position = Vector2( -315.667, -143.193 )
+texture = ExtResource( 4 )
+
+[node name="snow3" type="Sprite" parent="PlatformBlue/StonePlatform2/stone2/stone"]
+position = Vector2( -315.667, -214.079 )
+texture = ExtResource( 4 )
+
+[node name="stone2" type="Sprite" parent="PlatformBlue/StonePlatform2/stone2"]
+position = Vector2( -138, 0.583374 )
+texture = ExtResource( 3 )
+
+[node name="snow3" type="Sprite" parent="PlatformBlue/StonePlatform2/stone2"]
+position = Vector2( 32.2, -217.138 )
+texture = ExtResource( 4 )
+
+[node name="stone3" type="Sprite" parent="PlatformBlue/StonePlatform2"]
+position = Vector2( 355.522, -2.6886 )
+texture = ExtResource( 3 )
+
+[node name="stone4" type="Sprite" parent="PlatformBlue/StonePlatform2"]
+position = Vector2( 429.122, -3.95441 )
+texture = ExtResource( 3 )
+
+[node name="stone5" type="Sprite" parent="PlatformBlue/StonePlatform2"]
+position = Vector2( 502.722, -2.6886 )
+texture = ExtResource( 3 )
+
+[node name="stone6" type="Sprite" parent="PlatformBlue/StonePlatform2"]
+position = Vector2( 576.322, -1.42279 )
+texture = ExtResource( 3 )
+
+[node name="stone7" type="Sprite" parent="PlatformBlue/StonePlatform2"]
+position = Vector2( 648.856, -1.89978 )
+texture = ExtResource( 3 )
+
+[node name="stone" type="Sprite" parent="PlatformBlue/StonePlatform2/stone7"]
+position = Vector2( 72.5332, -1.26581 )
+texture = ExtResource( 3 )
+
+[node name="snow" type="Sprite" parent="PlatformBlue/StonePlatform2"]
+position = Vector2( 468.589, -74.9171 )
+texture = ExtResource( 4 )
+
+[node name="snow2" type="Sprite" parent="PlatformBlue/StonePlatform2"]
+position = Vector2( 469.656, -147.069 )
+texture = ExtResource( 4 )
+
+[node name="snow" type="Sprite" parent="PlatformBlue/StonePlatform2/snow2"]
+position = Vector2( 0, -72.1519 )
+texture = ExtResource( 4 )
+
+[node name="snow3" type="Sprite" parent="PlatformBlue/StonePlatform2"]
+position = Vector2( 686.189, -73.6512 )
+texture = ExtResource( 4 )
+
+[node name="snow4" type="Sprite" parent="PlatformBlue/StonePlatform2"]
+position = Vector2( 687.256, -145.803 )
+texture = ExtResource( 4 )
+
+[node name="snow5" type="Sprite" parent="PlatformBlue/StonePlatform2"]
+position = Vector2( 688.322, -217.955 )
+texture = ExtResource( 4 )
+
+[node name="meteorBrown_big1" type="Sprite" parent="PlatformBlue/StonePlatform2/snow5"]
+position = Vector2( -70.4, -208.902 )
+texture = ExtResource( 5 )
+
+[node name="meteorBrown_big2" type="Sprite" parent="PlatformBlue/StonePlatform2/snow5"]
+position = Vector2( 29.8667, -111.433 )
+texture = ExtResource( 5 )
+
+[node name="BlueShip" parent="." instance=ExtResource( 2 )]
+position = Vector2( 50.7009, -578.099 )
+scale = Vector2( 1.0519, 0.849228 )
+
+[node name="meteorBrown_big1" type="Sprite" parent="."]
+position = Vector2( 356.024, 167.244 )
+texture = ExtResource( 5 )
+
+[node name="meteorBrown_big2" type="Sprite" parent="."]
+position = Vector2( 198.024, 234.244 )
+texture = ExtResource( 5 )
+
+[node name="meteorBrown_big3" type="Sprite" parent="."]
+position = Vector2( 509.024, 153.244 )
+texture = ExtResource( 5 )
