@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Ground.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/efekk.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/snow.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 37.606, 34.1918 )
+
+[node name="Root" type="Node2D"]
+position = Vector2( 2.65002, 13.2502 )
+
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 71.0339, 321.944 )
+
+[node name="Ground" parent="." instance=ExtResource( 1 )]
+position = Vector2( 517.005, 533.546 )
+
+[node name="Ground2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 870.968, 411.683 )
+
+[node name="Ground3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 159.012, 425.669 )
+
+[node name="RigidBody2D2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 781.33, 62.388 )
+mass = 5.93
+linear_velocity = Vector2( -200, 0 )
+
+[node name="RigidBody2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 525.009, 27.5285 )
+linear_velocity = Vector2( -60, 0 )
+
+[node name="RigidBody2D3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 691.6, 27.5206 )
+linear_velocity = Vector2( -100, 0 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 55.3103, 26.0284 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 473.778, 215.438 )
+scale = Vector2( 1.09296, 1 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 473.304, 214.734 )
+shape = SubResource( 1 )
